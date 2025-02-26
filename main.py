@@ -25,13 +25,14 @@ def analyze_expression_with_cnn(face_roi):
         # 감정 매핑
         emotion_dict = {
             0: "ANGRY",
-            1: "DISGUST",
-            2: "FEAR",
+            1: "ANGRY",
+            2: "SAD",
             3: "HAPPY",
             4: "NEUTRAL",
             5: "SAD",
-            6: "SURPRISE"
+            6: "HAPPY"
         }
+
         return emotion_dict.get(emotion_label, "NEUTRAL")  # 기본 값 = 중립(NEUTRAL)
     
     except Exception as e:
